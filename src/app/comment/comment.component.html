@@ -1,0 +1,21 @@
+<div>
+        <form (ngSubmit)="Comment()">
+    <div><h4>  {{book.title}}</h4></div>
+      
+    
+    
+    <div>
+        <label for="comments">Enter here</label>
+    <textarea class="form-control" id="comments" name="newComment" rows="3" [(ngModel)]="newComment"></textarea>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit</button>
+    
+    
+<div *ngIf="book.comments_string.length>0">
+    <div *ngFor="let comment of book.comments_string;">
+        {{comment}}sgdfbg
+    </div>
+
+
+</div>
+</form>
